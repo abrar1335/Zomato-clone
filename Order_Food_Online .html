@@ -1,0 +1,865 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Food Online - Zomato</title>
+    <link rel="stylesheet" href="./Order_Food_Online .css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <!-- logo -->
+            <a href="zomato.html" class="m_logo"><img
+                    src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png" alt=""></a>
+            <!-- input section -->
+            <div class="inputs">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#FF7E8B" width="20" height="25" viewBox="0 0 20 20"
+                    aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 iRDDBk">
+                    <title>location-fill</title>
+                    <path
+                        d="M10.2 0.42c-4.5 0-8.2 3.7-8.2 8.3 0 6.2 7.5 11.3 7.8 11.6 0.2 0.1 0.3 0.1 0.4 0.1s0.3 0 0.4-0.1c0.3-0.2 7.8-5.3 7.8-11.6 0.1-4.6-3.6-8.3-8.2-8.3zM10.2 11.42c-1.7 0-3-1.3-3-3s1.3-3 3-3c1.7 0 3 1.3 3 3s-1.3 3-3 3z">
+                    </path>
+                </svg>
+                <input type="text" placeholder="Chhindwara" id="search_address">
+                <svg xmlns="http://www.w3.org/2000/svg" id="search_arrow" fill="#4F4F4F" width="12" height="12"
+                    viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                    class="sc-rbbb40-0 ezrcri">
+                    <title>down-triangle</title>
+                    <path d="M20 5.42l-10 10-10-10h20z"></path>
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#828282" width="18" height="18" viewBox="0 0 20 20"
+                    aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 iwHbVQ">
+                    <title>Search</title>
+                    <path
+                        d="M19.78 19.12l-3.88-3.9c1.28-1.6 2.080-3.6 2.080-5.8 0-5-3.98-9-8.98-9s-9 4-9 9c0 5 4 9 9 9 2.2 0 4.2-0.8 5.8-2.1l3.88 3.9c0.1 0.1 0.3 0.2 0.5 0.2s0.4-0.1 0.5-0.2c0.4-0.3 0.4-0.8 0.1-1.1zM1.5 9.42c0-4.1 3.4-7.5 7.5-7.5s7.48 3.4 7.48 7.5-3.38 7.5-7.48 7.5c-4.1 0-7.5-3.4-7.5-7.5z">
+                    </path>
+                </svg>
+                <input type="text" placeholder="Search for restaurant, cuisine or a dish" class="search2">
+                <div class="location_bx" id="location_bx">
+                    <div class="loc">
+                        <h3><svg xmlns="http://www.w3.org/2000/svg" fill="#EF4F5F" width="14" height="14"
+                                viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                class="sc-rbbb40-0 kyPUnV">
+                                <title>current-location</title>
+                                <path
+                                    d="M13.58 10c0 1.977-1.603 3.58-3.58 3.58s-3.58-1.603-3.58-3.58c0-1.977 1.603-3.58 3.58-3.58v0c1.977 0 3.58 1.603 3.58 3.58v0zM20 9.52v0.96c0 0.265-0.215 0.48-0.48 0.48v0h-1.72c-0.447 3.584-3.256 6.393-6.802 6.836l-0.038 0.004v1.72c0 0.265-0.215 0.48-0.48 0.48v0h-0.96c-0.265 0-0.48-0.215-0.48-0.48v0-1.72c-3.575-0.455-6.375-3.262-6.816-6.802l-0.004-0.038h-1.74c-0.265 0-0.48-0.215-0.48-0.48v0-0.96c0-0.265 0.215-0.48 0.48-0.48v0h1.74c0.445-3.578 3.245-6.385 6.781-6.836l0.039-0.004v-1.72c0-0.265 0.215-0.48 0.48-0.48v0h0.96c0.265 0 0.48 0.215 0.48 0.48v0 1.72c3.584 0.447 6.393 3.256 6.836 6.802l0.004 0.038h1.72c0.265 0 0.48 0.215 0.48 0.48v0zM15.96 10c0-3.292-2.668-5.96-5.96-5.96s-5.96 2.668-5.96 5.96c0 3.292 2.668 5.96 5.96 5.96v0c3.292 0 5.96-2.668 5.96-5.96v0z">
+                                </path>
+                            </svg>
+                            Detect current location
+                        </h3>
+                        <p>Using GPS</p>
+                        <hr>
+                    </div>
+                    <h3>Recent locations</h3>
+                    <div class="recent">
+                        <a href="#">
+                            <i class="bi bi-clock-history"></i>jaipur,india
+                        </a>
+                        <hr>
+                        <a href="#">
+                            <i class="bi bi-clock-history"></i>Devipura
+                        </a>
+                        <hr>
+                        <a href="#">
+                            <i class="bi bi-clock-history"></i>Gopi Vihar,Govindpura
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- login/signup -->
+            <ul>
+                <li>
+                    <a href="#"> Log in </a>
+                </li>
+                <li>
+                    <a href="#"> Sign up </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- path -->
+        <div class="path">
+            <h5>
+                <span class="n_path">Home</span>
+                <span class="s_path">/</span>
+                <span class="n_path">India</span>
+                <span class="s_path">/</span>
+                <span class="n_path">Chhindwara</span>
+                <span class="s_path">/</span>
+                <span class="main_add">Sant Shri Asharamji Gurukul,Chhindwara Restaurants</span>
+            </h5>
+        </div>
+        <!-- type -->
+        <div class="type">
+            <li>
+                <div class="img">
+                    <img src="./foodimg/delivery.png" alt="">
+                </div>
+                <span>Delivery</span>
+            </li>
+            <li>
+                <div class="img">
+                    <img src="./foodimg/dining.png" alt="">
+                </div>
+                <span>Dining Out</span>
+            </li>
+            <li>
+                <div class="img">
+                    <img src="./foodimg/night_out.png" alt="">
+                </div>
+                <span>Nightlife</span>
+            </li>
+        </div>
+    </div>
+    <!-- filter -->
+    <div class="filter">
+        <li><svg xmlns="http://www.w3.org/2000/svg" fill="#9C9C9C" width="18" height="18" viewBox="0 0 20 20"
+                aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 iwHbVQ">
+                <title>filter</title>
+                <path
+                    d="M2.14 6.42h7.26c0.353 1.207 1.45 2.074 2.75 2.074s2.397-0.867 2.745-2.054l0.005-0.020h2.96c0.343-0.059 0.6-0.355 0.6-0.71s-0.258-0.651-0.596-0.709l-0.004-0.001h-2.94c-0.341-1.226-1.447-2.11-2.76-2.11s-2.419 0.885-2.755 2.090l-0.005 0.020h-7.26c-0.343 0.059-0.6 0.355-0.6 0.71s0.257 0.651 0.596 0.709l0.004 0.001zM12.16 4.28c0.776 0.011 1.4 0.643 1.4 1.42 0 0.784-0.636 1.42-1.42 1.42-0.777 0-1.409-0.624-1.42-1.399l-0-0.001c-0-0.006-0-0.013-0-0.020 0-0.784 0.636-1.42 1.42-1.42 0.007 0 0.014 0 0.021 0l-0.001-0zM17.86 13.58h-7.24c-0.328-1.245-1.443-2.148-2.77-2.148s-2.442 0.903-2.766 2.128l-0.004 0.020h-2.94c-0.036-0.006-0.077-0.010-0.12-0.010-0.398 0-0.72 0.322-0.72 0.72s0.322 0.72 0.72 0.72c0.042 0 0.084-0.004 0.124-0.011l-0.004 0.001h2.96c0.353 1.207 1.45 2.074 2.75 2.074s2.397-0.867 2.745-2.054l0.005-0.020h7.26c0.343-0.059 0.6-0.355 0.6-0.71s-0.258-0.651-0.596-0.709l-0.004-0.001zM7.84 15.72c-0.776-0.011-1.4-0.643-1.4-1.42 0-0.784 0.636-1.42 1.42-1.42 0.777 0 1.409 0.624 1.42 1.399l0 0.001c0 0.006 0 0.013 0 0.020 0 0.784-0.636 1.42-1.42 1.42-0.007 0-0.014-0-0.021-0l0.001 0z">
+                </path>
+            </svg>Filter</li>
+        <li><i class="bi bi-arrow-down-up" style="color: #9C9C9C;"></i>Delivery Time</li>
+        <li>Pure Veg</li>
+        <li>Rating 4.0+</li>
+        <li>Great Offers</li>
+        <li>Cuisines<svg xmlns="http://www.w3.org/2000/svg" fill="#9C9C9C" width="18" height="18" viewBox="0 0 20 20"
+                aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 iwHbVQ">
+                <title>chevron-down</title>
+                <path
+                    d="M4.48 7.38c0.28-0.28 0.76-0.28 1.060 0l4.46 4.48 4.48-4.48c0.28-0.28 0.76-0.28 1.060 0s0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0l-5-5c-0.3-0.28-0.3-0.76 0-1.060z">
+                </path>
+            </svg></li>
+    </div>
+       <!-- Top food -->
+       <div class="top_food">
+        <h1>Inspiration for your first order</h1>
+        <button class="btn_food" id="btn_food_left"></button>
+        <button class="btn_food" id="btn_food_right"></button>
+
+        <div class="food_item" id="food_item">
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="https://b.zmtcdn.com/data/o2_assets/d0bd7c9405ac87f6aa65e31fe55800941632716575.png" alt="Pizza">
+                    </div>
+                    <h5>Pizza</h5>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="https://b.zmtcdn.com/data/o2_assets/37df381734b24f138af4a84fd7e4d4ec1716558578.jpeg" alt="Biryani">
+                    </div>
+                    <h5>Biryani</h5>
+
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="https://b.zmtcdn.com/data/o2_assets/52eb9796bb9bcf0eba64c643349e97211634401116.png" alt="Thali">
+                    </div>
+                    <h5>Thali</h5>
+
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="https://b.zmtcdn.com/data/dish_images/ccb7dc2ba2b054419f805da7f05704471634886169.png" alt="Burger">
+                    </div>
+                    <h5>Burger</h5>
+
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="https://b.zmtcdn.com/data/dish_images/d5ab931c8c239271de45e1c159af94311634805744.png" alt="Cake">
+                    </div>
+                    <h5>Cake</h5>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="https://b.zmtcdn.com/data/o2_assets/fc641efbb73b10484257f295ef0b9b981634401116.png" alt="Sandwich">
+                    </div>
+                    <h5>Sandwich</h5>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="https://b.zmtcdn.com/data/dish_images/e44c42ff4b60b025225c8691ef9735b11635781903.png" alt="Paneer">
+                    </div>
+                    <h5>Paneer</h5>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="https://b.zmtcdn.com/data/dish_images/197987b7ebcd1ee08f8c25ea4e77e20f1634731334.png" alt="Chicken">
+                    </div>
+                    <h5>Chicken</h5>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="https://b.zmtcdn.com/data/dish_images/c2f22c42f7ba90d81440a88449f4e5891634806087.png" alt="Rolls">
+                    </div>
+                    <h5>Rolls</h5>
+
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="https://b.zmtcdn.com/data/o2_assets/8dc39742916ddc369ebeb91928391b931632716660.png" alt="Dosa">
+                    </div>
+                    <h5>Dosa</h5>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="https://b.zmtcdn.com/data/o2_assets/019409fe8f838312214d9211be010ef31678798444.jpeg" alt="North Indian">
+                    </div>
+                    <h5>North Indian</h5>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="https://b.zmtcdn.com/data/dish_images/c953e5ca07150e9a51f8b21102e20f7e1634805157.png" alt="Chole Bhature">
+                    </div>
+                    <h5>Chole Bhature</h5>
+                </a>
+            </li>
+        </div>
+    </div>
+    <!-- Top Brands -->
+    <div class="top_brands">
+        <h1>Top Brands for you</h1>
+        <button class="btn_brands" id="btn_brands_left"></button>
+        <button class="btn_brands" id="btn_brands_right"></button>
+
+        <div class="brand_item" id="brand_item">
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/kanha.jpg" alt="Kanha">
+                    </div>
+                    <h5>Kanha</h5>
+                    <p>20 min</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/agarwal cateres.jpg" alt="Agarwal Caterers">
+                    </div>
+                    <h5>Agarwal Caterers</h5>
+                    <p>31 min</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/hari.png" alt="" alt="Harishankar Veg Restro">
+                    </div>
+                    <h5>Harishankar Veg Restro</h5>
+                    <p>20 min</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/McDonald.avif" alt="McDonald's">
+                    </div>
+                    <h5>McDonald's</h5>
+                    <p>30 min</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/burger.jpg" alt="Burger Farm">
+                    </div>
+                    <h5>Burger Farm</h5>
+                    <p>18 min</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/domino.png" alt="Domino's Pizza">
+                    </div>
+                    <h5>Domino's Pizza</h5>
+                    <p>28 min</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/king.png" alt="Burger King">
+                    </div>
+                    <h5>Burger King</h5>
+                    <p>33 min</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/romino.avif" alt="Rominus Pizza And Burger" height="130px" width="150px">
+                    </div>
+                    <h5>Rominus Pizza And Burger</h5>
+                    <p>28 min</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/roll.avif" alt="Rolls Express">
+                    </div>
+                    <h5>Roll Express</h5>
+                    <p>37 min</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/piza.webp" alt="The Pizza Unlimited">
+                    </div>
+                    <h5>The Pizza Unlimited</h5>
+                    <p>27 min</p>
+                </a>
+            </li>
+        </div>
+    </div>
+
+    <!-- card -->
+    <div class="card_item">
+        <h1>Order food online in MI Road</h1>
+        <div class="cards">
+            <div class="item">
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/tadka.jpg" alt="">
+                        <div class="offers">10% OFF</div>
+                        <div class="time">25min</div>
+                        <div class="extra">pro extra 20% OFF</div>
+                    </div>
+
+                    <div class="info">
+                        <h3>Tadka Thali House</h3>
+                        <p class="rating">3.5<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="1rem"
+                                height="1rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                                role="img" class="sc-rbbb40-0 ffadyU">
+                                <title>star-fill</title>
+                                <path
+                                    d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                                </path>
+                            </svg></p>
+                    </div>
+                    <div class="info2">
+                        <p>North Indian</p>
+                        <p class="price">₹100 for one</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/donals.jpg" alt="">
+                        <div class="offers">10% OFF</div>
+                        <div class="time">25min</div>
+                        <div class="extra">pro extra 20% OFF</div>
+                    </div>
+
+                    <div class="info">
+                        <h3>McDonald's</h3>
+                        <p class="rating">4.2<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="1rem"
+                                height="1rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                                role="img" class="sc-rbbb40-0 ffadyU">
+                                <title>star-fill</title>
+                                <path
+                                    d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                                </path>
+                            </svg></p>
+                    </div>
+                    <div class="info2">
+                        <p>Burger, Fast Food Bevera...</p>
+                        <p class="price">₹110 for one</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/sweet.jpg" alt="">
+                        <div class="offers">8% OFF</div>
+                        <div class="time">24min</div>
+                        <div class="extra">pro extra 15% OFF</div>
+                    </div>
+
+                    <div class="info">
+                        <h3>Kanha</h3>
+                        <p class="rating">3.5<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="1rem"
+                                height="1rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                                role="img" class="sc-rbbb40-0 ffadyU">
+                                <title>star-fill</title>
+                                <path
+                                    d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                                </path>
+                            </svg></p>
+                    </div>
+                    <div class="info2">
+                        <p>Mithai, North Indian Chine...</p>
+                        <p class="price">₹150 for one</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/kathi.avif" alt="">
+                        <div class="offers">10% OFF</div>
+                        <div class="time">20min</div>
+                        <div class="extra">pro extra 15% OFF</div>
+                    </div>
+
+                    <div class="info">
+                        <h3>Kathi Junction</h3>
+                        <p class="rating">4.5<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="1rem"
+                                height="1rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                                role="img" class="sc-rbbb40-0 ffadyU">
+                                <title>star-fill</title>
+                                <path
+                                    d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                                </path>
+                            </svg></p>
+                    </div>
+                    <div class="info2">
+                        <p>Rolls, North Indian, Biryani, Shawarma, Fast Food</p>
+                        <p class="price">₹120 for one</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/Raimen.avif" alt="">
+                        <div class="offers">10% OFF</div>
+                        <div class="time">25min</div>
+                        <div class="extra">pro extra 12% OFF</div>
+                    </div>
+
+                    <div class="info">
+                        <h3>Raimen's Café79</h3>
+                        <p class="rating">4.0<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="1rem"
+                                height="1rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                                role="img" class="sc-rbbb40-0 ffadyU">
+                                <title>star-fill</title>
+                                <path
+                                    d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                                </path>
+                            </svg></p>
+                    </div>
+                    <div class="info2">
+                        <p>Cafe Mocha</p>
+                        <p class="price">₹40 for one</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/Bluechilli.avif" alt="">
+                        <div class="offers">25% OFF</div>
+                        <div class="time">35min</div>
+                        <div class="extra">pro extra 21% OFF</div>
+                    </div>
+
+                    <div class="info">
+                        <h3>Bluechilli</h3>
+                        <p class="rating">3.8<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="1rem"
+                                height="1rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                                role="img" class="sc-rbbb40-0 ffadyU">
+                                <title>star-fill</title>
+                                <path
+                                    d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                                </path>
+                            </svg></p>
+                    </div>
+                    <div class="info2">
+                        <p>Veg Manchow Soup</p>
+                        <p class="price">₹119 for one</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/Raajbagh.avif" alt="">
+                        <div class="offers">30% OFF</div>
+                        <div class="time">30min</div>
+                        <div class="extra">pro extra 5% OFF</div>
+                    </div>
+
+                    <div class="info">
+                        <h3>Raajbagh Restaurant</h3>
+                        <p class="rating">3.5<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="1rem"
+                                height="1rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                                role="img" class="sc-rbbb40-0 ffadyU">
+                                <title>star-fill</title>
+                                <path
+                                    d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                                </path>
+                            </svg></p>
+                    </div>
+                    <div class="info2">
+                        <p>Pasta, Fast Food, Chinese, Shake...</p>
+                        <p class="price">₹130 for one</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/kiten.avif" alt="">
+                        <div class="offers">7% OFF</div>
+                        <div class="time">28min</div>
+                        <div class="extra">pro extra 27% OFF</div>
+                    </div>
+
+                    <div class="info">
+                        <h3>The Kitchen Story</h3>
+                        <p class="rating">3.7<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="1rem"
+                                height="1rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                                role="img" class="sc-rbbb40-0 ffadyU">
+                                <title>star-fill</title>
+                                <path
+                                    d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                                </path>
+                            </svg></p>
+                    </div>
+                    <div class="info2">
+                        <p>North Indian</p>
+                        <p class="price">₹70 for one</p>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <div class="img">
+                        <img src="./foodimg/Vrindavan.avif" alt="">
+                        <div class="offers">21% OFF</div>
+                        <div class="time">15min</div>
+                        <div class="extra">pro extra 24% OFF</div>
+                    </div>
+
+                    <div class="info">
+                        <h3>Vrindavan Caterers</h3>
+                        <p class="rating">4.3<svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="1rem"
+                                height="1rem" viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-"
+                                role="img" class="sc-rbbb40-0 ffadyU">
+                                <title>star-fill</title>
+                                <path
+                                    d="M6.76 6.8l-6.38 0.96c-0.22 0.040-0.38 0.22-0.38 0.44 0 0.12 0.040 0.24 0.12 0.32v0l4.64 4.76-1.1 6.66c0 0.020 0 0.040 0 0.080 0 0.24 0.2 0.44 0.44 0.44 0.1 0 0.16-0.020 0.24-0.060v0l5.7-3.12 5.68 3.12c0.060 0.040 0.14 0.060 0.22 0.060 0.24 0 0.44-0.2 0.44-0.44 0-0.040 0-0.060 0-0.080v0l-1.1-6.66 4.64-4.76c0.080-0.080 0.12-0.2 0.12-0.32 0-0.22-0.16-0.4-0.36-0.44h-0.020l-6.38-0.96-2.96-6.18c-0.060-0.12-0.18-0.2-0.32-0.2s-0.26 0.080-0.32 0.2v0z">
+                                </path>
+                            </svg></p>
+                    </div>
+                    <div class="info2">
+                        <p>North Indian, Chinese, Fast Food</p>
+                        <p class="price">₹60 for one</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- explore section -->
+    <div class="explore">
+        <div class="section">
+            <h1>Explore options near me</h1>
+            <h2>Popular cuisines near me</h2>
+            <div class="list">
+                <a href="#">Beverages food near me</a><span></span>
+                <a href="#">Biryani food near me</a><span></span>
+                <a href="#">Burger food near me</a><span></span>
+                <a href="#">Chinese food near me</a><span></span>
+                <a href="#">Coffee food near me</a><span></span>
+                <a href="#">Desserts</a><span></span>
+                <a href="#">food near me</a><span></span>
+                <a href="#">Ice Cream food near me</a><span></span>
+                <a href="#">Italian food near me</a><span></span>
+                <a href="#">Mithai food near me</a><span></span>
+                <a href="#">Momos food near me</a><span></span>
+                <a href="#">Mughlai food near me</a><span></span>
+                <a href="#">North Indian food near me</a><span></span>
+                <a href="#">Pasta food near me</a><span></span>
+                <a href="#">Pizza food near me</a><span></span>
+                <a href="#">Rolls food near me</a><span></span>
+                <a href="#">Sandwich food near me</a><span></span>
+                <a href="#">Shake food near me</a><span></span>
+                <a href="#">South Indian food near me</a><span></span>
+                <a href="#">Street food near me</a><span></span>
+                <a href="#">Tea food near me</a>
+            </div>
+            <h2>Popular restaurant types near me</h2>
+            <div class="list">
+                <a href="#">Bakeries near me</a><span></span>
+                <a href="#">Bars near me</a><span></span>
+                <a href="#">Beverage Shops near me</a><span></span>
+                <a href="#">Cafés near me</a><span></span>
+                <a href="#">Casual Dining near me</a><span></span>
+                <a href="#">Dessert Parlors near me</a><span></span>
+                <a href="#">Fine Dining near me</a><span></span>
+                <a href="#">Food Trucks near me</a><span></span>
+                <a href="#">Kiosks near me</a><span></span>
+                <a href="#">Paan Shop near me</a><span></span>
+                <a href="#">Quick Bites near me</a><span></span>
+                <a href="#">Sweet Shops near me</a>
+            </div>
+            <h2>Cities We Deliver To</h2>
+            <ul class="first">
+                <li><a href="#">Delhi NCR</a></li>
+                <li><a href="#">Hyderabad</a></li>
+                <li><a href="#">Ahmedabad</a></li>
+                <li><a href="#">Nashik</a></li>
+                <li><a href="#">Amritsar</a></li>
+                <li><a href="#">Ranchi</a></li>
+                <li><a href="#">Vadodara</a></li>
+                <li><a href="#">Puducherry</a></li>
+                <li><a href="#">Srinagar</a></li>
+                <li><a href="#">Haridwar</a></li>
+                <li><a href="#">Kozhikode</a></li>
+                <li><a href="#">Jodhpur</a></li>
+                <li><a href="#">Jalandhar</a></li>
+                <li><a href="#">Mumbai</a></li>
+                <li><a href="#">Bengaluru</a></li>
+                <li><a href="#">Pune</a></li>
+                <li><a href="#">Chennai</a></li>
+                <li><a href="#">Lucknow</a></li>
+                <li><a href="#">Kochi</a></li>
+                <li><a href="#">Jaipur</a></li>
+                <li><a href="#">Chandigarh</a></li>
+                <li><a href="#">Goa</a></li>
+                <li><a href="#">Indore</a></li>
+                <li><a href="#">Gangtok</a></li>
+                <li><a href="#">Ooty</a></li>
+                <li><a href="#">Shimla</a></li>
+                <li><a href="#">Ludhiana</a></li>
+                <li><a href="#">Guwahati</a></li>
+                <li><a href="#">Kanpur</a></li>
+                <li><a href="#">Allahabad</a></li>
+                <li><a href="#">Aurangabad</a></li>
+                <li><a href="#">Bhopal</a></li>
+                <li><a href="#">Visakhapatnam</a></li>
+                <li><a href="#">Bhubaneswar</a></li>
+                <li><a href="#">Coimbatore</a></li>
+                <li><a href="#">Mangalore</a></li>
+                <li><a href="#">Nagpur</a></li>
+                <li><a href="#">Agra</a></li>
+                <li><a href="#">Dehradun</a></li>
+                <li><a href="#">Mysore</a></li>
+                <li><a href="#">Surat</a></li>
+                <li><a href="#">Varanasi</a></li>
+                <li><a href="#">Patna</a></li>
+                <li><a href="#">Udaipur</a></li>
+                <li><a href="#">Khajuraho</a></li>
+                <li><a href="#">Neemrana</a></li>
+                <li><a href="#">Cuttack</a></li>
+                <li><a href="#">Trivandrum</a></li>
+                <li><a href="#">Leh</a></li>
+                <li><a href="#">Pushkar</a></li>
+                <li><a href="#">Rajkot</a></li>
+                <li><a href="#">Madurai</a></li>
+                <li><a href="#">Alappuzha</a></li>
+                <li><a href="#">Thrissur</a></li>
+                <li><a href="#">Manipal</a></li>
+                <li><a href="#">Vijayawada</a></li>
+                <li><a href="#">Kota</a></li>
+                <li><a href="#">Ajmer</a></li>
+                <li><a href="#">Mussoorie</a></li>
+                <li><a href="#">Rishikesh</a></li>
+                <li><a href="#">Jammu</a></li>
+                <li><a href="#">Manali</a></li>
+                <li><a href="#" class="city">All delivery cities</a></li>
+            </ul>
+        </div>
+    </div>
+ 
+    <!-- footer -->
+    <div class="footer">
+        <div class="foote">
+            <div class="footer_top">
+                <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*"
+                    alt="">
+                <div class="btns">
+
+                    <button id="country_button">
+
+                        <span></span>India
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15"
+                            viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                            class="sc-rbbb40-0 jKmKoK">
+                            <title>chevron-down</title>
+                            <path
+                                d="M4.48 7.38c0.28-0.28 0.76-0.28 1.060 0l4.46 4.48 4.48-4.48c0.28-0.28 0.76-0.28 1.060 0s0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0l-5-5c-0.3-0.28-0.3-0.76 0-1.060z">
+                            </path>
+                        </svg>
+                        <!--js -->
+                        <div class="country" id="country">
+
+                            <li><a href="#">India</a></li>
+                            <li><a href="#">USA</a></li>
+
+                        </div>
+                    </button>
+                    <button id="lang_button">
+                        <span></span><svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="18" height="18"
+                            viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                            class="sc-rbbb40-0 iwHbVQ">
+                            <title>language-globe</title>
+                            <path
+                                d="M10 0c-5.523 0-10 4.477-10 10s4.477 10 10 10c5.523 0 10-4.477 10-10v0c-0.011-5.518-4.482-9.989-9.999-10h-0.001zM17.14 6.18h-3c-0.264-1.393-0.63-2.62-1.107-3.791l0.047 0.131c1.755 0.733 3.161 2.010 4.039 3.618l0.021 0.042zM18.1 10c-0.002 0.676-0.090 1.33-0.252 1.954l0.012-0.054h-3.44c0.059-0.57 0.092-1.231 0.092-1.9s-0.034-1.33-0.099-1.982l0.007 0.082h3.44c0.15 0.57 0.238 1.224 0.24 1.899v0.001zM1.9 10c0.002-0.676 0.090-1.33 0.252-1.954l-0.012 0.054h3.46c-0.059 0.57-0.092 1.231-0.092 1.9s0.034 1.33 0.099 1.982l-0.007-0.082h-3.46c-0.15-0.57-0.238-1.224-0.24-1.899v-0.001zM7.48 8.1h5.040c0.063 0.57 0.099 1.231 0.099 1.9s-0.036 1.33-0.107 1.981l0.007-0.081h-5.040c-0.063-0.57-0.099-1.231-0.099-1.9s0.036-1.33 0.107-1.981l-0.007 0.081zM10.76 1.9c0.603 1.228 1.106 2.657 1.436 4.152l0.024 0.128h-4.44c0.354-1.623 0.857-3.052 1.51-4.395l-0.050 0.115c0.24 0 0.5 0 0.76 0s0.48 0 0.76 0zM6.96 2.48c-0.445 1.051-0.825 2.291-1.079 3.576l-0.021 0.124h-3c0.899-1.65 2.305-2.927 4.007-3.64l0.053-0.020zM2.86 13.8h3c0.262 1.4 0.629 2.634 1.107 3.811l-0.047-0.131c-1.757-0.738-3.165-2.022-4.039-3.637l-0.021-0.043zM9.24 18.1c-0.605-1.234-1.108-2.67-1.437-4.172l-0.023-0.128h4.44c-0.352 1.63-0.855 3.066-1.51 4.415l0.050-0.115c-0.24 0-0.5 0-0.76 0s-0.48 0-0.76 0zM13.040 17.52c0.431-1.046 0.798-2.28 1.041-3.558l0.019-0.122h3.040c-0.902 1.642-2.308 2.912-4.006 3.62l-0.054 0.020z">
+                            </path>
+                        </svg>English
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="15" height="15"
+                            viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                            class="sc-rbbb40-0 jKmKoK">
+                            <title>chevron-down</title>
+                            <path
+                                d="M4.48 7.38c0.28-0.28 0.76-0.28 1.060 0l4.46 4.48 4.48-4.48c0.28-0.28 0.76-0.28 1.060 0s0.28 0.78 0 1.060l-5 5c-0.3 0.3-0.78 0.3-1.060 0l-5-5c-0.3-0.28-0.3-0.76 0-1.060z">
+                            </path>
+                        </svg>
+
+                        <!--js -->
+                        <div class="language_btn" id="language_btn">
+                            <li><a href="">English </a></li>
+                            <li><a href="">Türkçe</a></li>
+                            <li><a href="">हिंदी</a></li>
+                            <li><a href="">Português (BR)</a></li>
+                            <li><a href="">Indonesian</a></li>
+                            <li><a href="">Português (PT)</a></li>
+                            <li><a href="">Español</a></li>
+                            <li><a href="">Čeština</a></li>
+                            <li><a href="">Slovenčina</a></li>
+                            <li><a href="">Polish</a></li>
+                            <li><a href="">Italian</a></li>
+                            <li><a href="">Vietnamese</a></li>
+
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="footer_center">
+                <div class="nav1">
+                    <ul>
+                        <h4>ABOUT ZOMATO</h4>
+                        <li><a href="#">Who We Are</a></li>
+                        <li><a href="#"> Blog</a></li>
+                        <li><a href="#">Work With Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="nav2">
+                    <ul>
+                        <h4>ZOMAVERSE</h4>
+                        <li><a href="#">Zomato</a></li>
+                        <li><a href="#">Blinkit</a></li>
+                        <li><a href="#">Feeding India</a></li>
+                        <li><a href="#">Hyperpure</a></li>
+                        <li><a href="#"> Zomaland</a></li>
+                    </ul>
+                </div>
+                <div class="nav3">
+                    <ul>
+                        <h4>FOR RESTAURANTS</h4>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Apps For You</a></li>
+                        <li><a href="#">Report Fraud</a></li>
+                        <li><a href="#"> Press Kit</a></li>
+                    </ul>
+                </div>
+                <div class="nav4">
+                    <ul>
+                        <h4>LEARN MORE</h4>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="nav5">
+                    <ul>
+                        <h4>SOCIAL LINKS</h4>
+                        <div class="icon">
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="22" height="22"
+                                    viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                    class="sc-rbbb40-0 cvuzKA">
+                                    <path
+                                        d="M0 10C0 4.5 4.5 0 10 0C15.5 0 20 4.5 20 10C20 15.5 15.5 20 10 20C4.5 20 0 15.5 0 10ZM7.0625 8.375H4.75V15.4375H7.0625V8.375ZM7.25 6.1875C7.25 5.5 6.75 5 5.9375 5C5.125 5 4.5625 5.5 4.5625 6.1875C4.5625 6.875 5.0625 7.4375 5.875 7.4375C6.6875 7.4375 7.25 6.875 7.25 6.1875ZM15.5 11.375C15.5 9.1875 14.3125 8.1875 12.8125 8.1875C11.5625 8.1875 11 8.875 10.6875 9.375V8.375H8.375C8.375 9.0625 8.375 15.4375 8.375 15.4375H10.6875V11.5C10.6875 11.3125 10.6875 11.0625 10.75 10.9375C10.9375 10.5 11.3125 10.0625 11.9375 10.0625C12.75 10.0625 13.125 10.6875 13.125 11.6875V15.4375H15.4375C15.5 15.4375 15.5 11.375 15.5 11.375Z">
+                                    </path>
+                                </svg></a>
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="22" height="22"
+                                    viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                    class="sc-rbbb40-0 cvuzKA">
+                                    <path
+                                        d="M0 10C0 4.5 4.5 0 10 0C15.5 0 20 4.5 20 10C20 15.5 15.5 20 10 20C4.5 20 0 15.5 0 10ZM10.1875 5C8.8125 5 8.625 5 8.0625 5C7.5 5.0625 7.125 5.125 6.8125 5.25C6.5 5.375 6.1875 5.5625 5.875 5.875C5.5625 6.1875 5.375 6.4375 5.25 6.8125C5.125 7.125 5 7.5 5 8.0625C5 8.625 5 8.75 5 10.1875C5 11.625 5 11.8125 5.0625 12.375C5.0625 12.9375 5.1875 13.3125 5.3125 13.625C5.4375 13.9375 5.625 14.25 5.9375 14.5625C6.1875 14.8125 6.5 15 6.875 15.1875C7.1875 15.3125 7.5625 15.4375 8.125 15.4375C8.6875 15.4375 8.875 15.5 10.25 15.5C11.6875 15.5 11.875 15.5 12.4375 15.4375C13 15.375 13.375 15.3125 13.6875 15.1875C14 15.0625 14.3125 14.875 14.625 14.5625C14.9375 14.25 15.125 14 15.25 13.625C15.375 13.3125 15.5 12.875 15.5 12.375C15.5625 11.8125 15.5625 11.625 15.5625 10.1875C15.5625 8.75 15.5625 8.625 15.5 8.0625C15.5 7.5 15.375 7.125 15.25 6.8125C15.125 6.4375 14.9375 6.1875 14.625 5.875C14.375 5.625 14.0625 5.4375 13.6875 5.25C13.375 5.125 12.9375 5.0625 12.4375 5C11.8125 5 11.625 5 10.1875 5ZM9.75 5.9375C9.875 5.9375 10.0625 5.9375 10.1875 5.9375C11.5625 5.9375 11.75 5.9375 12.3125 5.9375C12.8125 5.9375 13.0625 6.0625 13.25 6.125C13.5 6.25 13.6875 6.375 13.875 6.5C14.0625 6.625 14.1875 6.8125 14.25 7.125C14.3125 7.3125 14.4375 7.5625 14.4375 8.0625C14.5 8.625 14.5 8.8125 14.5 10.1875C14.5 11.5625 14.5 11.75 14.4375 12.3125C14.4375 12.8125 14.3125 13.125 14.25 13.3125C14.1875 13.5625 14.0625 13.6875 13.875 13.9375C13.6875 14.125 13.5 14.1875 13.25 14.3125C13.0625 14.375 12.8125 14.5 12.3125 14.5C11.75 14.5 11.5625 14.5625 10.1875 14.5625C8.8125 14.5625 8.625 14.5625 8.0625 14.5C7.5625 14.5 7.3125 14.375 7.125 14.3125C6.875 14.1875 6.6875 14.125 6.5 13.9375C6.3125 13.75 6.1875 13.5625 6.125 13.3125C6.0625 13.125 6 12.875 5.9375 12.3125C5.9375 11.75 5.9375 11.625 5.9375 10.1875C5.9375 8.8125 5.9375 8.625 5.9375 8.0625C6 7.5625 6.0625 7.3125 6.125 7.125C6.25 6.875 6.375 6.6875 6.5 6.5C6.625 6.3125 6.875 6.1875 7.125 6.125C7.3125 6.0625 7.5625 5.9375 8.0625 5.9375C8.5625 5.9375 8.75 5.9375 9.75 5.9375ZM13 6.8125C12.6875 6.8125 12.375 7.0625 12.375 7.4375C12.375 7.8125 12.625 8.0625 13 8.0625C13.375 8.0625 13.625 7.8125 13.625 7.4375C13.625 7.0625 13.3125 6.8125 13 6.8125ZM10.1875 7.5C8.75 7.5 7.5 8.6875 7.5 10.1875C7.5 11.6875 8.6875 12.875 10.1875 12.875C11.6875 12.875 12.875 11.6875 12.875 10.1875C12.875 8.6875 11.6875 7.5 10.1875 7.5ZM10.1875 8.4375C11.125 8.4375 11.9375 9.1875 11.9375 10.1875C11.9375 11.1875 11.1875 11.9375 10.1875 11.9375C9.25 11.9375 8.4375 11.1875 8.4375 10.1875C8.4375 9.1875 9.25 8.4375 10.1875 8.4375Z">
+                                    </path>
+                                </svg></a>
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="22" height="22"
+                                    viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                    class="sc-rbbb40-0 cvuzKA">
+                                    <path
+                                        d="M0 10C0 4.5 4.5 0 10 0C15.5 0 20 4.5 20 10C20 15.5 15.5 20 10 20C4.5 20 0 15.5 0 10ZM10.0625 8.125V8.5L9.6875 8.4375C8.3125 8.25 7.125 7.6875 6.125 6.6875L5.625 6.1875L5.5 6.5625C5.25 7.375 5.375 8.25 5.9375 8.8125C6.25 9.125 6.1875 9.1875 5.6875 9C5.5 8.9375 5.375 8.875 5.3125 8.9375C5.25 9 5.4375 9.6875 5.5625 9.9375C5.75 10.3125 6.1875 10.6875 6.5625 10.875L6.9375 11.0625H6.5C6.0625 11.0625 6.0625 11.0625 6.125 11.25C6.3125 11.75 6.875 12.25 7.5625 12.5L8 12.6875L7.625 12.9375C7 13.3125 6.3125 13.5 5.625 13.5C5.3125 13.5 5 13.5625 5 13.5625C5 13.625 5.9375 14.0625 6.4375 14.25C8.0625 14.75 9.9375 14.5 11.375 13.6875C12.375 13.0625 13.375 11.875 13.875 10.75C14.125 10.125 14.375 9 14.375 8.5C14.375 8.1875 14.4375 8.125 14.8125 7.6875C15.0625 7.4375 15.3125 7.1875 15.3125 7.0625C15.375 6.9375 15.375 6.9375 15 7.0625C14.375 7.3125 14.25 7.25 14.625 6.875C14.875 6.625 15.125 6.1875 15.125 6.0625C15.125 6.0625 15 6.0625 14.875 6.125C14.75 6.1875 14.4375 6.3125 14.1875 6.375L13.8125 6.5L13.5 6.25C13.3125 6.125 13 5.9375 12.875 5.9375C12.5 5.8125 11.9375 5.8125 11.5625 6C10.5625 6.25 10 7.1875 10.0625 8.125Z">
+                                    </path>
+                                </svg></a>
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="22" height="22"
+                                    viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                    class="sc-rbbb40-0 cvuzKA">
+                                    <path
+                                        d="M0 10C0 4.5 4.5 0 10 0C15.5 0 20 4.5 20 10C20 15.5 15.5 20 10 20C4.5 20 0 15.5 0 10ZM15.1875 7.4375C15.0625 7 14.6875 6.625 14.25 6.5C13.4375 6.25 10.1875 6.25 10.1875 6.25C10.1875 6.25 6.9375 6.25 6.125 6.5C5.6875 6.625 5.3125 7 5.1875 7.4375C5 8.25 5 10 5 10C5 10 5 11.75 5.25 12.5625C5.375 13 5.75 13.375 6.1875 13.5C7 13.75 10.25 13.75 10.25 13.75C10.25 13.75 13.5 13.75 14.3125 13.5C14.75 13.375 15.125 13 15.25 12.5625C15.5 11.75 15.5 10 15.5 10C15.5 10 15.4375 8.25 15.1875 7.4375ZM9.25 11.75V8.5L11.875 10.125L9.25 11.75Z">
+                                    </path>
+                                </svg></a>
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="22" height="22"
+                                    viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                    class="sc-rbbb40-0 cvuzKA">
+                                    <path
+                                        d="M0 10C0 4.5 4.5 0 10 0C15.5 0 20 4.5 20 10C20 15.5 15.5 20 10 20C4.5 20 0 15.5 0 10ZM10.75 15.4375V10.1875H12.1875L12.375 8.375H10.75V7.5C10.75 7.0625 10.8125 6.8125 11.5 6.8125H12.375V5H10.9375C9.1875 5 8.625 5.875 8.625 7.3125V8.375H7.5V10.1875H8.5625V15.4375C8.5625 15.4375 10.75 15.4375 10.75 15.4375Z">
+                                    </path>
+                                </svg></a>
+
+                        </div>
+                        <a href="#"><img
+                                src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png"
+                                alt="" loading="lazy"></a>
+                        <a href="#"><img
+                                src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png"
+                                alt="" loading="lazy"></a>
+                </div>
+            </div>
+            <div class="footer_end">
+                <hr>
+                <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and
+                    Content Policies. All trademarks are properties of their respective owners. 2008-2024 © Zomato™ Ltd.
+                    All rights reserved.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="./Order_Food_Online .js"></script>
+</body>
+
+</html>
