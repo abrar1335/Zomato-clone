@@ -1003,12 +1003,12 @@ hr{
   }
 
   header section .inputs input {
-      width: 150px;
+    width: 30%;
+}
+  header section .inputs .search2 {
+      width: 40%;
   }
 
-  header section .inputs .search2 {
-      width: 200px;
-  }
 
   header section .inputs .location_bx {
       width: 90%;
@@ -1017,6 +1017,7 @@ hr{
       left: 5%;
   }
 }
+
 
 @media (max-width: 576px) {
   header section {
@@ -1035,27 +1036,26 @@ hr{
       text-align: center;
   }
 
-  .header nav .inputs {
+  .header section .inputs {
     width: 100%;
     margin-top: 10px;
     flex-direction:row;
     height:50px;
+    overflow: hidden;
 }
 
- .header nav .iRDDBk .img{
+ .header section .iRDDBk{
   width: 100px;
   height: 100px;
   
 } 
 
-.header nav .inputs input {
-    width:80px;
+header section .inputs input {
+  width: 30%;
 }
-
-.header nav .inputs .search2 {
-    width:150px;
+header section .inputs .search2 {
+    width: 40%;
 }
-
 .header nav ul {
   height: 100%;
   display: flex;
